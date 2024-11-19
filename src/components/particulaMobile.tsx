@@ -35,6 +35,7 @@ const ParticleCanvas: React.FC = () => {
 
     const handleOrientation = (event: DeviceOrientationEvent) => {
       const { beta, gamma } = event;
+      console.log(`beta: ${beta}, gamma: ${gamma}`);
       setParticles(prevParticles => prevParticles.map(p => {
         p.x += gamma ? gamma / 10 : 0;
         p.y += beta ? beta / 10 : 0;

@@ -4,9 +4,6 @@ import Reloj from './components/reloj';
 import useSound from 'use-sound';
 import luces from './assets/lucesFondo.png'
 import boopSfx from './assets/musica.mp3';
-import ParticleCanvas from './components/particulaMobile';
-
-
 
 function App() {
   ParticlesComponent()
@@ -14,9 +11,9 @@ function App() {
   play()
   return (
     <>
-      <ParticleCanvas/>
+      <canvas />
       <div className="container-inv">
-      <img className="lucesFondo" src={luces} />
+        <img className="lucesFondo" src={luces} />
         <div className='sectio-texto'>
           <p className="titulo">Quinceañera</p>
           <svg className="number">
@@ -26,7 +23,7 @@ function App() {
           </svg>
           <svg className="svg-nombre">
             <text className='texto-nombre' x="50%" y="50%" dy=".35em" text-anchor="middle">
-              Jhasly Gil Soncco
+              Jhaslyn Gil Soncco
             </text>
           </svg>
           <p className="texto-largo">
