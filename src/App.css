@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Parisienne&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Parisienne&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Charmonman&display=swap");
+
+
+canvas {
+  position: absolute;
+  z-index: 10;
+  width: -webkit-fill-available;
+}
+
+.number {
+  font-family: "Charmonman", sans-serif;
+  width: 100%;
+  height: 33%;
+  position: relative;
+
+}
+
+.number text {
+  animation: stroke 5s infinite alternate;
+  stroke-width: 2;
+  stroke: #365FA0;
+  font-size: 180px;
+}
+
+.titulo {
+  font-family: "Charmonman", sans-serif;
+  font-size: 50px;
+  color: rgba(247, 218, 223, 1);
+  font-weight: 600;
+  position: relative;
+  z-index: 5;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+svg {
+  font-family: "Parisienne", sans-serif;
+  width: 100%;
+  height: 100%;
+}
+
+svg text {
+  animation: stroke 5s infinite alternate;
+  stroke-width: 2;
+  stroke: #F7DADF;
+  font-size: 36px;
+}
+
+@keyframes stroke {
+  0% {
+    fill: rgba(247, 204, 204, 0);
+    stroke: rgba(247, 218, 223, 1);
+    stroke-dashoffset: 25%;
+    stroke-dasharray: 0 50%;
+    stroke-width: 2;
+  }
+
+  70% {
+    fill: rgba(247, 204, 204, 0);
+    stroke: rgba(247, 218, 223, 1);
+  }
+
+  80% {
+    fill: rgba(247, 204, 204, 0);
+    stroke: rgba(247, 218, 223, 1);
+    stroke-width: 3;
+  }
+
+  100% {
+    fill: rgba(247, 204, 204, 1);
+    stroke: rgba(247, 218, 223, 0);
+    stroke-dashoffset: -25%;
+    stroke-dasharray: 50% 0;
+    stroke-width: 0;
+  }
+}
+
+
+h1 {
+  font-family: "Parisienne", cursive;
+}
+
+
+#root {
+  max-width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #DCD2C8;
+}
+
+.container-inv {
+  overflow: hidden;
+  position: relative;
+  background: rgb(63, 44, 63);
+  background: linear-gradient(180deg, rgba(63, 44, 63, 1) 0%, rgba(214, 155, 175, 1) 100%);
+  width: 100%;
+  margin: auto;
+  display: grid;
+  height: 100vh;
+
+}
+
+.texto-largo {
+  font-size: 17px;
+  color: #8258F5;
+  font-weight: 700;
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  font-family: "Nunito Sans", sans-serif;
+  text-shadow: 0px 2px 3px #ffffff;
+}
+
+.lucesFondo {
+  position: absolute;
+  width: -webkit-fill-available;
+  z-index: 1;
+  top: 0;
+}
+
+.content-tiempo {
+  display: flex;
+  margin: auto;
+  align-items: center;
+  margin-bottom: 3rem;
+  justify-content: center;
+}
+
+.hora {
+  display: flex;
+  gap: 8px;
+}
+
+.content-hora {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.numero-tiempo {
+  font-size: 18px;
+  font-weight: 800;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  background-color: white;
+  margin-bottom: 0;
+  color: #5f122c;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.punto {
+  font-size: 32px;
+  font-weight: 700;
+  color: white;
+}
+
+.texto-hora {
+  font-size: 11px;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  margin-top: 0;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.svg-nombre {
+  height: 6rem;
+}
+
+.titulo-hora {
+  width: 90%;
+  margin: auto;
+  margin-top: 1rem;
+  text-align: left;
+  font-size: 30px;
+  color: #5f122c;
+  font-family: "Parisienne", cursive;
+  font-weight: 600;
+}
+
+@media screen and (min-width: 1200px) {
+  .container-inv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    height: inherit;
+  }
+
+  .titulo {
+    font-size: 8rem;
+    margin-top: 0;
+  }
+
+  .number {
+    height: 19rem;
+  }
+
+  .texto-edad {
+    font-size: 25rem !important;
+  }
+
+  .texto-nombre {
+    font-size: 7rem;
+  }
+
+  .svg-nombre {
+    height: 15rem;
+  }
+
+  .numero-tiempo {
+    width: 80px;
+    height: 80px;
+    font-size: 42px;
+  }
+
+  .texto-hora {
+    font-size: 19px;
+  }
+
+  .titulo-hora {
+    margin-left: 0;
+    font-size: 53px;
+  }
+
+  .content-tiempo {
+    justify-content: center;
+  }
+
+  .section-hora {
+    z-index: 1;
+  }
+
+  .sectio-texto {
+    z-index: 1;
+  }
+}
