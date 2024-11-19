@@ -4,6 +4,7 @@ import Reloj from './components/reloj';
 import useSound from 'use-sound';
 import luces from './assets/lucesFondo.png'
 import boopSfx from './assets/musica.mp3';
+import ParticleCanvas from './components/particulaMobile';
 
 
 
@@ -13,7 +14,7 @@ function App() {
   play()
   return (
     <>
-      <canvas />
+      <ParticleCanvas/>
       <div className="container-inv">
       <img className="lucesFondo" src={luces} />
         <div className='sectio-texto'>
