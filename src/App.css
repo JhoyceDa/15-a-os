@@ -5,7 +5,7 @@
 
 canvas {
   position: absolute;
-  z-index: 10;
+  z-index: 2;
   width: -webkit-fill-available;
 }
 
@@ -106,7 +106,7 @@ h1 {
 
 .texto-largo {
   font-size: 17px;
-  color: #8258F5;
+  color: #3f00eb;
   font-weight: 700;
   width: 80%;
   margin: auto;
@@ -186,7 +186,70 @@ h1 {
   font-weight: 600;
 }
 
+.fotos {
+  width: 240px;
+  object-fit: cover;
+}
+
+.swiper-container {
+  width: 240px;
+  height: 320px;
+}
+
+
+
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.content-slider {
+  width: 15rem;
+  height: 26rem;
+  position: relative;
+  margin: auto;
+  z-index: 2;
+}
+
+.swiper-container {
+  width: 240px;
+  height: 320px;
+}
+
 @media screen and (min-width: 1200px) {
+
+  .swiper-container {
+    width: 240px;
+    height: 320px;
+  }
+
+  .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  .content-slider {
+    width: 15rem;
+    height: 26rem;
+    position: relative;
+    margin: auto;
+  }
+
+  .swiper-container {
+    width: 240px;
+    height: 320px;
+  }
+
   .container-inv {
     display: flex;
     align-items: center;
@@ -235,11 +298,6 @@ h1 {
   .content-tiempo {
     justify-content: center;
   }
-
-  .section-hora {
-    z-index: 1;
-  }
-
   .sectio-texto {
     z-index: 1;
   }
