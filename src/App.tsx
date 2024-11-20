@@ -9,7 +9,6 @@ import InfoTexto from './components/textoInfo';
 import { useEffect, useState } from 'react';
 import SliderFotos from './components/sliderFotos';
 
-
 function App() {
   const [width, setWidth] = useState(window.innerWidth);
 
@@ -21,7 +20,7 @@ function App() {
   }, []);
   ParticlesComponent()
   const [play] = useSound(boopSfx);
-  //play() 
+  play() 
   return (
     <>
       <link
@@ -39,6 +38,7 @@ function App() {
         </div>
         <div className='section-hora'>
           {width >= 1500 && <SliderFotos />}
+          
           <p className="titulo-hora">Comienza en:</p>
           <Reloj />
         </div>

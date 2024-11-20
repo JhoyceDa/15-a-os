@@ -9,7 +9,7 @@ const SliderPrincipal = () => {
         <div className='content-slicer-principal'>
             <Swiper
                 effect={'flip'}
-                grabCursor={false}
+                grabCursor={true}
                 pagination={false}
                 navigation={false}
                 autoplay={{
