@@ -46,13 +46,13 @@ svg text {
 
 .texto-largo {
     font-size: 17px;
-    color: #3f00eb;
+    color: #5f122c;
     font-weight: 700;
     width: 80%;
     margin: auto;
     text-align: center;
     font-family: "Nunito Sans", sans-serif;
-    text-shadow: 0px 2px 3px #ffffff;
+    text-shadow: 3px 4px 12px #ffffff;
 }
 
 @media screen and (min-width: 1500px) {

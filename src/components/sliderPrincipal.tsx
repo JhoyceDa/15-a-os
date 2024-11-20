@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { EffectFlip, Pagination, Autoplay } from 'swiper/modules';
+import { EffectFlip, Pagination, Navigation, Autoplay } from 'swiper/modules';
 import './slider.css'
 import InfoTexto from './textoInfo';
 import SliderFotos from './sliderFotos';
@@ -16,7 +16,7 @@ const SliderPrincipal = () => {
                     delay: 5500,
                     disableOnInteraction: false,
                 }}
-                modules={[EffectFlip, Pagination, Autoplay]}
+                modules={[EffectFlip, Pagination, Autoplay, Navigation]}
                 className="mySwiper"
             >
                 <SwiperSlide>

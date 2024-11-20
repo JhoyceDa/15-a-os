@@ -20,14 +20,13 @@ function App() {
   }, []);
   ParticlesComponent()
   const [play] = useSound(boopSfx);
-  play() 
+  //play() 
   return (
     <>
       <link
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
       />
-
       <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
       <canvas />
       <div className="container-inv">
@@ -37,8 +36,7 @@ function App() {
           {width <= 1500 ? <SliderPrincipal /> : <InfoTexto />}
         </div>
         <div className='section-hora'>
-          {width >= 1500 && <SliderFotos />}
-          
+          {width >= 1500 && <SliderFotos />}          
           <p className="titulo-hora">Comienza en:</p>
           <Reloj />
         </div>
