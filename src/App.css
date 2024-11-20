@@ -147,13 +147,35 @@ h1 {
   display: flex;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1500px) {
+  .titulo {
+    font-size: 4rem;
+  }
 
-  .content-slider {
-    width: 15rem;
-    height: 26rem;
-    position: relative;
-    margin: auto;
+  .texto-edad {
+    font-size: 12rem !important;
+  }
+
+  .texto-nombre {
+    font-size: 4rem;
+  }
+
+  .svg-nombre {
+    font-size: 7rem;
+  }
+
+  .number {
+    font-size: 10rem;
+  }
+
+  .titulo-hora {
+    font-size: 35px;
+  }
+
+  .numero-tiempo {
+    font-size: 26px;
+    width: 60px;
+    height: 60px;
   }
 
   .container-inv {
@@ -164,6 +186,28 @@ h1 {
     padding-right: 1rem;
     height: inherit;
   }
+
+  .sectio-texto {
+    z-index: 1;
+    width: 50%;
+  }
+
+  .section-hora {
+    width: 50%;
+  }
+
+}
+
+@media screen and (min-width: 2000px) {
+
+  .content-slider {
+    width: 15rem;
+    height: 26rem;
+    position: relative;
+    margin: auto;
+  }
+
+
 
   .titulo {
     font-size: 8rem;
@@ -207,5 +251,10 @@ h1 {
 
   .sectio-texto {
     z-index: 1;
+    width: 50%;
+  }
+
+  .section-hora {
+    width: 50%;
   }
 }

@@ -21,7 +21,7 @@ function App() {
   }, []);
   ParticlesComponent()
   const [play] = useSound(boopSfx);
-  play() 
+  //play() 
   return (
     <>
       <link
@@ -35,10 +35,10 @@ function App() {
         <img className="lucesFondo" src={luces} />
         <div className='sectio-texto'>
           <p className="titulo">Quinceañera</p>
-          {width <= 700 ? <SliderPrincipal /> : <InfoTexto />}
+          {width <= 1500 ? <SliderPrincipal /> : <InfoTexto />}
         </div>
         <div className='section-hora'>
-          {width >= 700 && <SliderFotos />}
+          {width >= 1500 && <SliderFotos />}
           <p className="titulo-hora">Comienza en:</p>
           <Reloj />
         </div>

@@ -55,8 +55,11 @@ svg text {
     text-shadow: 0px 2px 3px #ffffff;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1500px) {
     .svg-nombre {
         height: 15rem;
+    }
+    .texto-largo {
+        width: 54%;
     }
 }
