@@ -10,17 +10,18 @@ import { useEffect, useState } from 'react';
 import SliderFotos from './components/sliderFotos';
 
 function App() {
-  const [width, setWidth] = useState(window.innerWidth);
-
+  const [play] = useSound(boopSfx);
+  const [width, setWidth] = useState(window.innerWidth); 
+  
   useEffect(() => {
+    play()
     const handleResize = () => setWidth(window.innerWidth);
 
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
-  }, []);
+  }, [play]);
+
   ParticlesComponent()
-  const [play] = useSound(boopSfx);
-  //play() 
   return (
     <>
       <link
@@ -32,7 +33,7 @@ function App() {
       <div className="container-inv">
         <img className="lucesFondo" src={luces} />
         <div className='sectio-texto'>
-          <p className="titulo">Quinceañera</p>
+          <p className="titulo">Quinceañeraa</p>
           {width <= 1500 ? <SliderPrincipal /> : <InfoTexto />}
         </div>
         <div className='section-hora'>
