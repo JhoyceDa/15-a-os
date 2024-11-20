@@ -1,34 +1,26 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { EffectFlip, Pagination, Navigation } from 'swiper/modules';
-import SliderFotos from './sliderFotos';
-import '../App.css';
+import { EffectFlip, Pagination, Autoplay } from 'swiper/modules';
 import './slider.css'
+import InfoTexto from './textoInfo';
+import SliderFotos from './sliderFotos';
 
 const SliderPrincipal = () => {
     return (
-        <div>
+        <div className='content-slicer-principal'>
             <Swiper
                 effect={'flip'}
-                grabCursor={true}
-                pagination={true}
-                navigation={true}
-                modules={[EffectFlip, Pagination, Navigation]}
+                grabCursor={false}
+                pagination={false}
+                navigation={false}
+                autoplay={{
+                    delay: 5500,
+                    disableOnInteraction: false,
+                }}
+                modules={[EffectFlip, Pagination, Autoplay]}
                 className="mySwiper"
             >
                 <SwiperSlide>
-                    <div>
-
-                        <svg className="number">
-                            <text className='texto-edad' x="50%" y="50%" dy=".35em" text-anchor="middle">
-                                15
-                            </text>
-                        </svg>
-                        <svg className="svg-nombre">
-                            <text className='texto-nombre' x="50%" y="50%" dy=".35em" text-anchor="middle">
-                                Jhaslyn Gil Soncco
-                            </text>
-                        </svg>
-                    </div>
+                    <InfoTexto />
                 </SwiperSlide>
                 <SwiperSlide>
                     <SliderFotos />

@@ -33,48 +33,7 @@ canvas {
   z-index: 5;
   text-align: center;
   margin-bottom: 0;
-}
-
-svg {
-  font-family: "Parisienne", sans-serif;
-  width: 100%;
-  height: 100%;
-}
-
-svg text {
-  animation: stroke 5s infinite alternate;
-  stroke-width: 2;
-  stroke: #F7DADF;
-  font-size: 36px;
-}
-
-@keyframes stroke {
-  0% {
-    fill: rgba(247, 204, 204, 0);
-    stroke: rgba(247, 218, 223, 1);
-    stroke-dashoffset: 25%;
-    stroke-dasharray: 0 50%;
-    stroke-width: 2;
-  }
-
-  70% {
-    fill: rgba(247, 204, 204, 0);
-    stroke: rgba(247, 218, 223, 1);
-  }
-
-  80% {
-    fill: rgba(247, 204, 204, 0);
-    stroke: rgba(247, 218, 223, 1);
-    stroke-width: 3;
-  }
-
-  100% {
-    fill: rgba(247, 204, 204, 1);
-    stroke: rgba(247, 218, 223, 0);
-    stroke-dashoffset: -25%;
-    stroke-dasharray: 50% 0;
-    stroke-width: 0;
-  }
+  margin-top: 0;
 }
 
 
@@ -101,18 +60,9 @@ h1 {
   margin: auto;
   display: grid;
   height: 100vh;
+  justify-content: space-around;
+  align-content: space-between;
 
-}
-
-.texto-largo {
-  font-size: 17px;
-  color: #3f00eb;
-  font-weight: 700;
-  width: 80%;
-  margin: auto;
-  text-align: center;
-  font-family: "Nunito Sans", sans-serif;
-  text-shadow: 0px 2px 3px #ffffff;
 }
 
 .lucesFondo {
@@ -126,7 +76,6 @@ h1 {
   display: flex;
   margin: auto;
   align-items: center;
-  margin-bottom: 3rem;
   justify-content: center;
 }
 
@@ -187,67 +136,26 @@ h1 {
 }
 
 .fotos {
-  width: 240px;
+  width: 300px !important;
   object-fit: cover;
 }
 
-.swiper-container {
-  width: 240px;
-  height: 320px;
-}
-
-
-
-.swiper-slide {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 18px;
-  font-size: 22px;
-  font-weight: bold;
-  color: #fff;
-}
-
 .content-slider {
-  width: 15rem;
+  width: 19rem;
   height: 26rem;
   position: relative;
   margin: auto;
   z-index: 2;
-}
-
-.swiper-container {
-  width: 240px;
-  height: 320px;
+  display: flex;
 }
 
 @media screen and (min-width: 1200px) {
-
-  .swiper-container {
-    width: 240px;
-    height: 320px;
-  }
-
-  .swiper-slide {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 18px;
-    font-size: 22px;
-    font-weight: bold;
-    color: #fff;
-  }
 
   .content-slider {
     width: 15rem;
     height: 26rem;
     position: relative;
     margin: auto;
-  }
-
-  .swiper-container {
-    width: 240px;
-    height: 320px;
   }
 
   .container-inv {
@@ -261,7 +169,7 @@ h1 {
 
   .titulo {
     font-size: 8rem;
-    margin-top: 0;
+    margin-top: 0 !important;
   }
 
   .number {
@@ -298,6 +206,7 @@ h1 {
   .content-tiempo {
     justify-content: center;
   }
+
   .sectio-texto {
     z-index: 1;
   }

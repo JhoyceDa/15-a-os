@@ -1,19 +1,28 @@
 import img2 from '../assets/img2.jpeg';
 import img3 from '../assets/img3.jpeg';
-import '../App.css';
+import './slider.css'
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { EffectCards } from 'swiper/modules';
+import { Autoplay, Mousewheel, Pagination  } from 'swiper/modules';
 
 const SliderFotos = () => {
     return (
         <div className='content-slider'>
             <Swiper
-                effect={'cards'}
-                grabCursor={true}
-                modules={[EffectCards]}
+                direction={'vertical'}
+                slidesPerView={1}
+                spaceBetween={30}
+                mousewheel={true}
+                pagination={{
+                    clickable: true,
+                }}
+                autoplay={{
+                    delay: 1500,
+                    disableOnInteraction: false,
+                }}
+                modules={[Mousewheel, Pagination, Autoplay]}
                 className="mySwiper"
-            >                
+            >
                 <SwiperSlide><img className='fotos' src={img2} alt="Imagen 2" /></SwiperSlide>
                 <SwiperSlide><img className='fotos' src={img3} alt="Imagen 3" /></SwiperSlide>
             </Swiper>
