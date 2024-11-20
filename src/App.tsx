@@ -21,7 +21,7 @@ function App() {
   }, []);
   ParticlesComponent()
   const [play] = useSound(boopSfx);
-  //play() 
+  play() 
   return (
     <>
       <link
