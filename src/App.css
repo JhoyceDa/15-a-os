@@ -3,6 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Charmonman&display=swap");
 
 
+
 canvas {
   position: absolute;
   z-index: 2;
@@ -50,7 +51,8 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #DCD2C8;
+  background: rgb(63, 44, 63);
+  background: linear-gradient(180deg, rgba(63, 44, 63, 1) 0%, rgba(214, 155, 175, 1) 100%);
 }
 
 .container-inv {
@@ -69,6 +71,7 @@ h1 {
   position: absolute;
   width: -webkit-fill-available;
   z-index: 1;
+  left: 0;
   top: 0;
 }
 
@@ -142,6 +145,104 @@ h1 {
   z-index: 2;
   display: flex;
 }
+
+.nombre-invitado {
+  background-color: white;
+  border-radius: 10px;
+  padding: 15px;
+  display: grid;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: #910598;
+}
+
+.nombre-invitado span {
+  color: #b30f46;
+}
+
+
+.wrapp {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  position: relative;
+  z-index: 2;
+  min-width: 170px;
+  min-height: 36px;
+  display: inline-flex;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 22px;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 1.3px;
+  font-weight: 700;
+  color: #d5d5ec;
+  background: #bb4fd1;
+  background: linear-gradient(90deg, rgb(166 84 193) 0%, rgb(231 137 210) 100%);
+  border: none;
+  border-radius: 1000px;
+  box-shadow: 12px 12px 24px rgb(207 103 213 / 64%);
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  padding: 10px;
+}
+
+
+
+.button:hover,
+.button:focus {
+  color: #313133;
+  transform: translateY(-6px);
+}
+
+.button:hover::before,
+.button:focus::before {
+  opacity: 1;
+}
+
+.button::after {
+  content: '';
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  border: 5px dotted #f3ecf0;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: ring 1.5s infinite;
+}
+
+.button:hover::after,
+.button:focus::after {
+  animation: none;
+  display: none;
+}
+
+@keyframes ring {
+  0% {
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+  }
+
+  100% {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+  }
+}
+
 
 @media screen and (min-width: 1500px) {
   .titulo {

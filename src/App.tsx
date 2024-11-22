@@ -11,8 +11,14 @@ import SliderFotos from './components/sliderFotos';
 
 function App() {
   const [play] = useSound(boopSfx);
-  const [width, setWidth] = useState(window.innerWidth); 
-  
+  const [width, setWidth] = useState(window.innerWidth);
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const valor = window.location.search
+  const result = new URLSearchParams(valor)
+  const nombre = result.get('name')
+  console.log(nombre?.replace('-',' '))
+
   useEffect(() => {
     play()
     const handleResize = () => setWidth(window.innerWidth);
@@ -20,6 +26,12 @@ function App() {
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, [play]);
+
+  const handleInteraction = () => {
+    if (!isPlaying) {
+      setIsPlaying(true);
+    }
+  };
 
   ParticlesComponent()
   return (
@@ -30,18 +42,30 @@ function App() {
       />
       <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
       <canvas />
-      <div className="container-inv">
-        <img className="lucesFondo" src={luces} />
-        <div className='sectio-texto'>
-          <p className="titulo">Quinceañeraa</p>
-          {width <= 1500 ? <SliderPrincipal /> : <InfoTexto />}
+      {isPlaying ?
+        <div className="container-inv">
+          <img className="lucesFondo" src={luces} />
+          <div className='sectio-texto'>
+            <p className="titulo">Quinceañera</p>
+            {width <= 1500 ? <SliderPrincipal /> : <InfoTexto />}
+          </div>
+          <div className='section-hora'>
+            {width >= 1500 && <SliderFotos />}
+            <p className="titulo-hora">Comienza en:</p>
+            <Reloj />
+          </div>
         </div>
-        <div className='section-hora'>
-          {width >= 1500 && <SliderFotos />}          
-          <p className="titulo-hora">Comienza en:</p>
-          <Reloj />
+        :
+        <div className="section-name-persona">
+          <img className="lucesFondo" src={luces} />
+          <p className='nombre-invitado'><span>Invitación para: </span>{nombre ? nombre.replace('-', ' ') : 'Mi Fiestade 15 Años'}</p>
+          <div className='wrapp'>
+            <button className='button' onClick={handleInteraction}>Abrir</button>
+          </div>
         </div>
-      </div>
+      }
+
+
     </>
   );
 
