@@ -8,6 +8,7 @@ import SliderPrincipal from './components/sliderPrincipal';
 import InfoTexto from './components/textoInfo';
 import { useEffect, useState } from 'react';
 import SliderFotos from './components/sliderFotos';
+import Modal from './components/modal';
 
 function App() {
   const [play] = useSound(boopSfx);
@@ -17,10 +18,10 @@ function App() {
   const valor = window.location.search
   const result = new URLSearchParams(valor)
   const nombre = result.get('name')
-  console.log(nombre?.replace('-',' '))
+  console.log(nombre?.replace('-', ' '))
 
   useEffect(() => {
-    play()
+    //play()
     const handleResize = () => setWidth(window.innerWidth);
 
     window.addEventListener('resize', handleResize);
@@ -51,7 +52,10 @@ function App() {
           </div>
           <div className='section-hora'>
             {width >= 1500 && <SliderFotos />}
-            <p className="titulo-hora">Comienza en:</p>
+            <div className='section-modal'>
+              <p className="titulo-hora">Comienza en:</p>
+              <Modal />
+            </div>
             <Reloj />
           </div>
         </div>

@@ -44,6 +44,11 @@ h1 {
   font-family: "Parisienne", cursive;
 }
 
+.section-modal {
+  display: flex;  
+  justify-content: center;
+}
+
 
 #root {
   max-width: 100%;
@@ -245,6 +250,11 @@ h1 {
 
 
 @media screen and (min-width: 1500px) {
+  .section-modal {
+    width: 54%;
+    margin: auto;
+  }
+
   .titulo {
     font-size: 4rem;
   }
