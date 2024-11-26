@@ -1,3 +1,4 @@
+import { TypeAnimation } from 'react-type-animation';
 import './infoTexto.css'
 
 const InfoTexto = () => {
@@ -13,9 +14,19 @@ const InfoTexto = () => {
                     Jhaslyn Gil Soncco
                 </text>
             </svg>
-            <p className="texto-largo" id='typedtext'>
-                Hay momentos inolvidables que se atesoran en el corazón para siempre, por esa razón quiero que compartas conmigo este día tan especial.
-            </p>
+
+            <TypeAnimation
+                splitter={(str) => str.split(/(?= )/)}
+                sequence={[
+                    'Hay momentos inolvidables que se atesoran en el corazón para siempre, por esa razón quiero que compartas conmigo este día tan especial.',
+                    1000,
+                ]}
+                
+                speed={{ type: 'keyStrokeDelayInMs', value: 99 }}
+                omitDeletionAnimation={true}
+                style={{  }}
+                repeat={Infinity}
+            />
         </div>
     )
 }

@@ -21,8 +21,8 @@ const Modal = () => {
                         
             <dialog className="my-dialog" ref={dialogRef}>
                 <p className="datos">Fecha: <span>30 de noviembre.</span></p>
-                <p className="datos">Hora: <span>6:00 pm</span></p>
-                <p className="datos">Ubicación: <span>Urubamba - Av. Panamericana s/n - Restaurante el Urubambino.</span></p>
+                <p className="datos">Hora: <span>6:30 pm</span></p>
+                <p className="datos">Ubicación: <span>Auditorio de I.E. María Auxiliadora</span></p>
                 
                 <button className="buton-aceptar" onClick={closeDialog}>Cerrar</button>
             </dialog>

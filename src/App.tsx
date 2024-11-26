@@ -21,7 +21,7 @@ function App() {
   console.log(nombre?.replace('-', ' '))
 
   useEffect(() => {
-    //play()
+    play()
     const handleResize = () => setWidth(window.innerWidth);
 
     window.addEventListener('resize', handleResize);

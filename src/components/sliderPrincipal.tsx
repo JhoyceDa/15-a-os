@@ -3,6 +3,7 @@ import { EffectFlip, Pagination, Navigation, Autoplay } from 'swiper/modules';
 import './slider.css'
 import InfoTexto from './textoInfo';
 import SliderFotos from './sliderFotos';
+import Padrinos from './padrinos';
 
 const SliderPrincipal = () => {
     return (
@@ -13,7 +14,7 @@ const SliderPrincipal = () => {
                 pagination={false}
                 navigation={false}
                 autoplay={{
-                    delay: 5500,
+                    delay: 6500,
                     disableOnInteraction: false,
                 }}
                 modules={[EffectFlip, Pagination, Autoplay, Navigation]}
@@ -24,6 +25,9 @@ const SliderPrincipal = () => {
                 </SwiperSlide>
                 <SwiperSlide>
                     <SliderFotos />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <Padrinos />
                 </SwiperSlide>
             </Swiper>
         </div>
