@@ -44,15 +44,23 @@ svg text {
     height: 6rem;
 }
 
-.index-module_type__E-SaG {
+.content-text-largo {
+width: 80%;
+margin: auto;
+text-align: center;
+}
+
+.texto-largo {
+    text-align: center;
     font-size: 17px;
     color: #5f122c;
     font-weight: 700;
-    width: 80%;
+    width: 80% !important;
     margin: auto;
     text-align: center;
     font-family: "Nunito Sans", sans-serif;
     text-shadow: 3px 4px 12px #ffffff;
+    
 }
 
 @media screen and (min-width: 1500px) {
@@ -60,6 +68,9 @@ svg text {
         height: 15rem;
     }
     .texto-largo {
+        width: 54% !important;
+    }
+    .content-text-largo {
         width: 54%;
     }
 }

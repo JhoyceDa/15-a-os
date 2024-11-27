@@ -6,8 +6,8 @@ const Padrinos = () => {
             <p className="nombre-padrino">Javier Gil Muñoz</p>
             <p className="nombre-padrino">Merly Soncco Paucar</p>
             <p className="titulo-padrinos">Padrinos</p>
-            <p className="nombre-padrino">Dany Estacio Huallpamayta</p>
-            <p className="nombre-padrino">Teresa Quispe Megia</p>
+            <p className="nombre-padrino">Jaime Zamora Ríos</p>
+            <p className="nombre-padrino">Soledad Ccoicca Rojas</p>
         </div>
     )
 }

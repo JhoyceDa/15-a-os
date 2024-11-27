@@ -18,7 +18,8 @@ function App() {
   const valor = window.location.search
   const result = new URLSearchParams(valor)
   const nombre = result.get('name')
-  console.log(nombre?.replace('-', ' '))
+  const nom = nombre?.replace(/-/g, ' ');
+  console.log(nom);
 
   useEffect(() => {
     play()
@@ -62,7 +63,7 @@ function App() {
         :
         <div className="section-name-persona">
           <img className="lucesFondo" src={luces} />
-          <p className='nombre-invitado'><span>Invitación para: </span>{nombre ? nombre.replace('-', ' ') : 'Mi Fiestade 15 Años'}</p>
+          <p className='nombre-invitado'><span>Invitación para: </span>{nom ? nom : 'Mi Fiestade 15 Años'}</p>
           <div className='wrapp'>
             <button className='button' onClick={handleInteraction}>Abrir</button>
           </div>

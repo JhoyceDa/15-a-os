@@ -14,19 +14,22 @@ const InfoTexto = () => {
                     Jhaslyn Gil Soncco
                 </text>
             </svg>
+            <div className='content-text-largo'>
+
 
             <TypeAnimation
                 splitter={(str) => str.split(/(?= )/)}
                 sequence={[
                     'Hay momentos inolvidables que se atesoran en el corazón para siempre, por esa razón quiero que compartas conmigo este día tan especial.',
-                    1000,
-                ]}
-                
-                speed={{ type: 'keyStrokeDelayInMs', value: 99 }}
+                    7000,
+                ]}                
+                speed={{ type: 'keyStrokeDelayInMs', value: 80 }}
                 omitDeletionAnimation={true}
-                style={{  }}
                 repeat={Infinity}
-            />
+                cursor={false}
+                className='texto-largo'
+                />
+                </div>
         </div>
     )
 }
